@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.66" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.3" />
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.11" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\FlowCheck.Domain\FlowCheck.Domain.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Reference Include="JJ.Net.Core">
+	    <HintPath>..\FlowCheck.Domain\DLL\JJ.Net.Core.dll</HintPath>
+	  </Reference>
+	  <Reference Include="JJ.Net.CrossData">
+	    <HintPath>..\FlowCheck.Domain\DLL\JJ.Net.CrossData.dll</HintPath>
+	  </Reference>
+	  <Reference Include="JJ.Net.Data">
+	    <HintPath>..\FlowCheck.Domain\DLL\JJ.Net.Data.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+	
+</Project>

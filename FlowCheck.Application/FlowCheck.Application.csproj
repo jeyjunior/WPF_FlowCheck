@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.5" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.3" />
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.11" />
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\FlowCheck.Domain\FlowCheck.Domain.csproj" />
+		<ProjectReference Include="..\FlowCheck.InfraData\FlowCheck.InfraData.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="JJ.NET.Core">
+			<HintPath>..\FlowCheck.Domain\DLL\JJ.NET.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="JJ.NET.CrossData">
+			<HintPath>..\FlowCheck.Domain\DLL\JJ.NET.CrossData.dll</HintPath>
+		</Reference>
+		<Reference Include="JJ.NET.Cryptography">
+			<HintPath>..\FlowCheck.Domain\DLL\JJ.NET.Cryptography.dll</HintPath>
+		</Reference>
+		<Reference Include="JJ.NET.Data">
+			<HintPath>..\FlowCheck.Domain\DLL\JJ.NET.Data.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	
+</Project>

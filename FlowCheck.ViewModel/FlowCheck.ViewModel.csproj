@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FlowCheck.Domain\FlowCheck.Domain.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="JJ.Net.Core">
+			<HintPath>..\FlowCheck.Domain\DLL\JJ.Net.Core.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	
+</Project>

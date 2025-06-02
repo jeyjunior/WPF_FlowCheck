@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\FlowCheck.Application\FlowCheck.Application.csproj" />
+		<ProjectReference Include="..\FlowCheck.Domain\FlowCheck.Domain.csproj" />
+		<ProjectReference Include="..\FlowCheck.ViewModel\FlowCheck.ViewModel.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="JJ.Net.Core">
+			<HintPath>..\FlowCheck.Domain\DLL\JJ.Net.Core.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	
+</Project>

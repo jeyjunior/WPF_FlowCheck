@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlowCheck"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="450">
+        Title="Flow Check" Height="550" Width="450">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <!-- Barra de navegação -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Background="LightGray">
+            <Button Content="Checklist" Margin="10" Padding="10,5" Click="NavigateToTarefaPage"/>
+            <Button Content="Lembretes Fixos" Margin="10" Padding="10,5" Click="NavigateToAnotacaoPage"/>
+        </StackPanel>
+
+        <!-- Frame principal para as páginas -->
+        <Frame Grid.Row="0" Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

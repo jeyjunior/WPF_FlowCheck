@@ -1,4 +1,5 @@
 ﻿using FlowCheck.Domain.Entidades;
+using FlowCheck.Domain.Enumerador;
 using FlowCheck.InfraData.Repository;
 using JJ.Net.CrossData.Atributo;
 using JJ.Net.CrossData.Enumerador;
@@ -22,7 +23,7 @@ namespace FlowCheck.Application
         public static void Iniciar()
         {
             RegistrarEntidades();
-            // RegistrarParametros();
+            RegistrarParametros();
         }
         public static void RegistrarEntidades()
         {
@@ -67,17 +68,17 @@ namespace FlowCheck.Application
 
                 try
                 {
-                    //string parametro = eParametros.HabilitarNomePadronizado.ToString();
+                    string parametro = eParametro.TituloTarefa.ToString();
 
-                    //if (parametroRepository.ObterLista($" Parametro.Nome = '{parametro}' ").FirstOrDefault() == null)
-                    //{
-                    //    uow.Begin();
+                    if (parametroRepository.ObterLista($" Parametro.Nome = '{parametro}' ").FirstOrDefault() == null)
+                    {
+                        uow.Begin();
 
-                    //    parametroRepository.Adicionar(new Domain.Entidades.Parametro { Nome = eParametros.HabilitarNomePadronizado.ToString(), Valor = "0" });
-                    //    parametroRepository.Adicionar(new Domain.Entidades.Parametro { Nome = eParametros.NomePadronizado.ToString(), Valor = "" });
+                        parametroRepository.Adicionar(new Domain.Entidades.Parametro { Nome = eParametro.TituloTarefa.ToString(), Valor = "Tarefas" });
+                        parametroRepository.Adicionar(new Domain.Entidades.Parametro { Nome = eParametro.TituloTarefa.ToString(), Valor = "Anotações" });
 
-                    //    uow.Commit();
-                    //}
+                        uow.Commit();
+                    }
                 }
                 catch (SqlException ex)
                 {

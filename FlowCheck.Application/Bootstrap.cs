@@ -52,6 +52,11 @@ namespace FlowCheck.Application
             });
 
             services.AddSingleton<IAnotacaoRepository, AnotacaoRepository>();
+            services.AddSingleton<ICategoriaRepository, CategoriaRepository>();
+            services.AddSingleton<ICorRepository, CorRepository>();
+            services.AddSingleton<IParametroRepository, ParametroRepository>();
+            services.AddSingleton<ITarefaAnotacaoRepository, TarefaAnotacaoRepository>();
+            services.AddSingleton<ITarefaRepository, TarefaRepository>();
         }
     }
 }
